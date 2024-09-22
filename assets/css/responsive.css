@@ -1,0 +1,182 @@
+/* PC */
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+/* Tablet & Mobile */
+@media (max-width: 991.98px) {
+  .navbar {
+    display: none;
+  }
+  .header-bottom {
+    position: relative;
+  }
+  .header-bottom__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  .menu-header__icon {
+    position: absolute;
+    top: 101px;
+    left: 25px;
+    width: 24px;
+    color: #fff;
+  }
+  /* Overlay */
+  .menu-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    /* Bình thường ẩn đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-drawer {
+    position: fixed;
+    background-color: #2e1919;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 0 20px;
+  }
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background-color: #00ffff37;
+  }
+  .header-top__action {
+    margin: 0 auto;
+  }
+  /* Lesson */
+  .lesson__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .lesson__img {
+    width: 100%;
+  }
+  .lesson-item {
+    width: 90%;
+    margin: 0 auto;
+    text-align: start;
+  }
+  .lesson__list {
+    text-align: center;
+  }
+  .lesson__desc {
+    width: 100%;
+  }
+  /* ????????? */
+  .about__media {
+    width: 100%;
+  }
+  .about__img--large {
+    width: 100%;
+    border-radius: 15px;
+    margin: 0 auto 25px;
+  }
+  .about__img--small {
+    width: 50%;
+    height: auto;
+    left: 200px;
+  }
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-top {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+  .footer-hidden-tablet {
+    display: none;
+  }
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+}
+/* Mobile */
+@media (max-width: 767.98px) {
+  .header-top__action--signup {
+    display: none;
+  }
+  .header-top__action--login {
+    margin: 0;
+  }
+  .lesson__img,
+  .lesson-bottom__img {
+    width: 100%;
+    height: auto;
+  }
+  .lesson-item {
+    width: 100%;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .footer__copyright {
+    margin-top: 20px;
+  }
+  .team__list {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+  .about__img--small {
+    width: 50%;
+    height: auto;
+    left: 100px;
+    top: 110px;
+  }
+  /* Text nhỏ lại */
+  .section-heading {
+    font-size: 2rem;
+  }
+  .section-desc,
+  p {
+    font-size: 1.2rem;
+  }
+  ol {
+    font-size: 1.2rem;
+    margin: 0 0 0 10px;
+  }
+  strong {
+    font-size: 1.5rem;
+  }
+  /* Image cho ra giữa */
+  .lesson-bottom__img {
+    width: 570px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 20px 0;
+    width: 100%;
+  }
+}

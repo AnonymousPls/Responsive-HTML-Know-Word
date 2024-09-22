@@ -1,0 +1,545 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --header-bg: #192027;
+  --a-color: #007bff;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Sora", system-ui;
+  background-color: #262b30;
+  color: #fff;
+}
+/* ---------------------- Common ------------------------- */
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+}
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+.full-background {
+  background-color: var(--header-bg);
+}
+.btn {
+  display: inline-block;
+  min-width: 205px;
+  line-height: 60px;
+  background-color: #0674ec;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 999px;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.section-heading {
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+.section-heading ~ .section-heading {
+  margin-bottom: 40px;
+}
+.section-desc,
+p {
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.4rem;
+  line-height: 1.67;
+  margin-top: 18px;
+}
+.lesson__heading a {
+  color: #fff;
+}
+.lesson__heading:hover a {
+  color: var(--a-color);
+}
+ol {
+  /* margin: 40px 30px 20px 30px; */
+  margin: 0 30px;
+  list-style-type: decimal;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.4rem;
+}
+.ol--none {
+  list-style-type: none;
+}
+strong {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f7b205;
+}
+li {
+  line-height: 1.67;
+}
+/* Highlight Text */
+mark::before,
+mark::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+mark::before {
+  content: " [highlight start] ";
+}
+
+mark::after {
+  content: " [highlight end] ";
+}
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+sup {
+  vertical-align: super;
+  font-size: 1.5rem;
+}
+/* ---------------------- Common End ------------------------- */
+/* ---------------------- Main ------------------------- */
+/* ---------------------- Header ------------------------- */
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.header-top {
+  /* height: 74px; */
+  padding: 15px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.header-top__action--login {
+  min-width: 144px;
+  line-height: 44px;
+  font-size: 1.6rem;
+  margin-right: 28px;
+}
+.header-top__action--signup {
+  min-width: 144px;
+  line-height: 44px;
+  font-size: 1.6rem;
+}
+.navbar__list {
+  display: flex;
+}
+.navbar__link,
+.breadcrumb__home,
+.breadcrumb__services {
+  padding: 8px 21px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+  position: relative;
+}
+.navbar__link:hover {
+  color: var(--a-color);
+  /* text-shadow: 1px 0 0 currentColor; */
+}
+.navbar__link--active {
+  color: var(--a-color);
+}
+.navbar__link--active::after {
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: var(--a-color);
+  display: inline-block;
+  position: absolute;
+  left: 21px;
+  bottom: 6px;
+}
+/* Hero */
+
+/* Hero End */
+/* ---------------------- Header End ------------------------- */
+/* ---------------------- Breadcrumb Area ------------------------- */
+.breadcrumb {
+  position: relative;
+}
+.breadcrumb__home::after {
+  content: "/";
+  position: absolute;
+  left: 60px;
+}
+.breadcrumb__lesson {
+  color: #fff;
+  padding: 8px 0px;
+  margin-left: 21px;
+}
+.breadcrumb__home {
+  padding: 8px 0px;
+}
+.row {
+  /* height: 50px; */
+  padding: 15px 0;
+}
+.page-title {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.14;
+  letter-spacing: -1.4px;
+}
+/* ---------------------- Breadcrumb Area End ------------------------- */
+/* ---------------------- Lesson 1 ------------------------- */
+/* Lesson 1 Top */
+.lesson {
+  background-color: var(--header-bg);
+  padding: 20px 0;
+}
+.lesson__desc {
+  text-align: center;
+  margin: 18px auto 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.4rem;
+}
+.lesson__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.lesson__img {
+  width: 570px;
+  height: 570px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.lesson-item {
+  width: 470px;
+  border-radius: 10px;
+  display: flex;
+  padding: 21px;
+  transition: 0.25s;
+}
+.lesson-item:hover {
+  box-shadow: 0px 14px 28px 0px rgba(256, 256, 256, 0.05);
+  position: relative;
+}
+.lesson-item__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  color: var(--a-color);
+  background: var(--header-bg);
+  box-shadow: 0px 8px 16px 0px rgba(40, 155, 222, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 19px;
+  transition: 0.25s;
+}
+.lesson-item:hover .lesson-item__icon {
+  color: #fff;
+  background-color: red;
+}
+.lesson-item__heading {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.lesson-item__desc {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+.lesson__btn {
+  margin-top: 55px;
+}
+/* Lesson 1 Top End */
+/* Lesson 1 Bottom */
+.lesson-bottom {
+  background-color: var(--header-bg);
+  padding: 20px 0;
+}
+.lesson-bottom__desc {
+  text-align: center;
+  width: 468px;
+  margin: 18px auto 0;
+}
+.lesson-bottom__row {
+  margin-top: 20px;
+  text-align: center;
+}
+.lesson-bottom__img {
+  width: 570px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.lesson-bottom-item__heading {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.lesson-bottom-item__desc {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+/* Lesson 1 Bottom End */
+/* ---------------------- Lesson End ------------------------- */
+/* ---------------------- Team ------------------------- */
+.team {
+  padding: 85px 0;
+}
+
+.team-header {
+  text-align: center;
+  margin: 0 auto;
+  /* Căn giữa text của khối .team-header và căn giữa khối .team-header */
+}
+
+.team__cta {
+  margin-top: 38px;
+}
+
+.team__list {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 34px;
+}
+
+.team-item__thumb {
+  height: 290px;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  /*  Hoặc display: flex; xử lí phần bị thừa của thẻ inline ở đây là thẻ img */
+  transition: 0.5s;
+  /* Do .team-item:hover .team-item__thumb {transform: scale(1.1);} nên cần transition */
+}
+
+.team-item__img-bg {
+  background-color: var(--header-bg);
+  border-radius: 6px;
+  padding-top: 28px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.team-item__name {
+  margin-top: 12px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  /* 175% */
+}
+
+.team-item__desc {
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.86;
+  /* 185.714% */
+}
+
+.team-item:hover .team-item__thumb {
+  transform: scale(1.1);
+}
+.about__img {
+  position: relative;
+}
+.about__media {
+  margin-top: 20px;
+}
+.about__img--large {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.07);
+  object-fit: cover;
+  display: flex;
+  /* Xử lí phần dư ra phía dưới của thẻ inline ở đây là thẻ img */
+}
+.about__img--small {
+  width: 332px;
+  height: 370px;
+  border-radius: 6px;
+  object-fit: cover;
+  position: absolute;
+  top: 300px;
+  left: 450px;
+}
+/* ---------------------- Team End ------------------------- */
+/* ---------------------- Main End ------------------------- */
+/* ---------------------- Footer ------------------------- */
+.footer {
+  margin-top: 170px;
+  /* Bản chất của thẻ section là chiếm hết chiều ngang của webpage do đó khi cần giới hạn background-color ta set background-color ở thẻ con trực tiếp của nó VD: .blog__inner, .footer__inner... */
+  /* Hoặc set margin-left và margin-right >= 100px (Đoạn này sai sai cần xem xét lại) sẽ giới hạn được background-color vừa với khung chứa  */
+  padding-top: 100px;
+  background: var(--header-bg);
+  font-family: "Open Sans", sans-serif;
+  /* Viết font-family ở thẻ cha để tất cả thẻ con sẽ thừa kế font Open-sans */
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+  /* column-gap: 78px; làm cho .footer__link dài bị xuống hàng (chiếm 2 hàng) */
+  /* => Dùng white-space: nowrap; ở .footer__link không xuống hàng (ép text thành 1 hàng) */
+}
+
+.footer__desc {
+  margin-top: 21px;
+  color: #a9b3bb;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  /* 175% */
+}
+
+.footer__heading {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+  /* 175% */
+}
+
+.footer__list {
+  margin: 20px 0 28px;
+}
+
+.footer__link {
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  /* 185.714% */
+  white-space: nowrap;
+  /* column-gap: 78px; làm cho .footer__link dài bị xuống hàng (chiếm 2 hàng) */
+  /* => Dùng white-space: nowrap; ở .footer__link không xuống hàng (ép text thành 1 hàng) */
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__item {
+  margin-bottom: 10px;
+}
+
+.footer__social {
+  /* margin-top: 20px; */
+  margin: 20px 0 28px;
+  display: flex;
+  column-gap: 10px;
+}
+
+.footer__social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #2e80ce;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.footer__social-btn:hover {
+  background-color: #2e80ce;
+  color: #fff;
+}
+
+.footer-form {
+  display: flex;
+  column-gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-form__input {
+  width: 212px;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid #406181;
+  background: transparent;
+  outline: none;
+  color: #fff;
+}
+
+.footer-form__input::placeholder {
+  color: #9ca8b1;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  /* 185.714% */
+}
+
+.footer-form__submit {
+  width: 108px;
+  height: 46px;
+  border-radius: 4px;
+  background: #2e80ce;
+
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+  /* 185.714% */
+
+  border: none;
+}
+
+.footer-form__submit:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+/* Lúc này kiểm tra lại font chữ của Button thì font-family không phải là "Open-sans" mà là Arial @@, xem video bài 95.12 để sửa lại
+/* =================== Common  ===================
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+/* Lúc này .footer-form__submit sẽ có thể kế thừa font từ cha nó là .footer . Nếu không khai báo inherit nó sẽ có font là Ariel */
+
+.footer__copyright {
+  border-top: 1px solid #406181;
+}
+
+.footer__copyright-text {
+  color: #aab3ba;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  /* 185.714% */
+  padding: 28px 0 42px;
+}
+/* ---------------------- Footer End ------------------------- */
