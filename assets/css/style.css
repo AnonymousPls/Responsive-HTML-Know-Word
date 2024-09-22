@@ -79,7 +79,7 @@ ol {
   list-style-type: none;
   text-indent: 2%;
 }
-ul {
+.ul--circle {
   /* margin: 40px 30px 20px 30px; */
   margin: 0 30px;
   /* list-style-type: decimal; */
