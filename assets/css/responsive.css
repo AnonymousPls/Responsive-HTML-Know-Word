@@ -3,6 +3,20 @@
   .mobile-header {
     display: none;
   }
+  .div--relative {
+    position: relative;
+    height: 500px;
+  }
+  .img--hover {
+    transition: 1s;
+    position: absolute;
+    left: 555px;
+    top: 250px;
+    translate: -50% -50%;
+  }
+  .img--hover:hover {
+    width: 80vw;
+  }
 }
 /* Tablet & Mobile */
 @media (max-width: 991.98px) {
@@ -119,16 +133,6 @@
   .team-item__thumb {
     margin: 0 auto;
   }
-  .div--relative {
-    height: 320px;
-  }
-  .img--hover {
-    left: 400px;
-    top: 140px;
-  }
-  .img--hover:hover {
-    width: 100vw;
-  }
 }
 /* Mobile */
 @media (max-width: 767.98px) {
@@ -196,15 +200,5 @@
     object-fit: cover;
     margin: 20px 0;
     width: 100%;
-  }
-  .div--relative {
-    height: 140px;
-  }
-  .img--hover {
-    left: 153px;
-    top: 60px;
-  }
-  .img--hover:hover {
-    width: 100vw;
   }
 }
