@@ -119,6 +119,16 @@
   .team-item__thumb {
     margin: 0 auto;
   }
+  .div--relative {
+    height: 320px;
+  }
+  .img--hover {
+    left: 400px;
+    top: 140px;
+  }
+  .img--hover:hover {
+    width: 100vw;
+  }
 }
 /* Mobile */
 @media (max-width: 767.98px) {
@@ -186,5 +196,15 @@
     object-fit: cover;
     margin: 20px 0;
     width: 100%;
+  }
+  .div--relative {
+    height: 140px;
+  }
+  .img--hover {
+    left: 153px;
+    top: 60px;
+  }
+  .img--hover:hover {
+    width: 100vw;
   }
 }

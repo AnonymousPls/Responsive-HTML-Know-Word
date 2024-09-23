@@ -302,6 +302,20 @@ sup {
   object-fit: cover;
   margin: 20px;
 }
+.div--relative {
+  position: relative;
+  height: 500px;
+}
+.img--hover {
+  transition: 1s;
+  position: absolute;
+  left: 555px;
+  top: 250px;
+  translate: -50% -50%;
+}
+.img--hover:hover {
+  width: 80vw;
+}
 
 .lesson-bottom-item__heading {
   color: #fff;
