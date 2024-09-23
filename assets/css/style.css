@@ -81,7 +81,7 @@ ol {
 }
 .ul--circle {
   /* margin: 40px 30px 20px 30px; */
-  margin: 0 30px;
+  margin: 0 30px 0 55px;
   /* list-style-type: decimal; */
   list-style-type: circle;
   font-family: "Times New Roman", Times, serif;

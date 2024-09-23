@@ -133,6 +133,10 @@
   .team-item__thumb {
     margin: 0 auto;
   }
+  .lesson-bottom__img {
+    width: 500px;
+    height: auto;
+  }
 }
 /* Mobile */
 @media (max-width: 767.98px) {
@@ -142,11 +146,7 @@
   .header-top__action--login {
     margin: 0;
   }
-  .lesson__img,
-  .lesson-bottom__img {
-    width: 100%;
-    height: auto;
-  }
+
   .lesson-item {
     width: 100%;
   }
@@ -179,26 +179,24 @@
     font-size: 1.2rem;
   }
   ol {
+    margin: 0;
     font-size: 1.2rem;
-    margin: 0 0 0 10px;
+  }
+  .ol--none {
+    list-style-type: none;
+    text-indent: 2%;
   }
   .ul--circle {
-    /* margin: 40px 30px 20px 30px; */
     margin: 0 0 0 10px;
-    /* list-style-type: decimal; */
-    list-style-type: circle;
-    font-family: "Times New Roman", Times, serif;
     font-size: 1.2rem;
   }
   strong {
     font-size: 1.5rem;
   }
-  /* Image cho ra giữa */
+  /* Image cho ra giữa không được phải chỉnh lại indent-text = 0% của ol thì mới được. Điều này là không thể do đó ta cho khối img ra ngoài ul, ol luôn */
+  .lesson__img,
   .lesson-bottom__img {
-    width: 570px;
-    border-radius: 12px;
-    object-fit: cover;
-    margin: 20px 0;
-    width: 100%;
+    width: 300px;
+    height: auto;
   }
 }
