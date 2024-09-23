@@ -137,6 +137,13 @@
     width: 500px;
     height: auto;
   }
+  .overlay {
+    bottom: 49px;
+    left: 182px;
+    width: 500px;
+    font-size: 2rem;
+    padding: 20px;
+  }
 }
 /* Mobile */
 @media (max-width: 767.98px) {
@@ -198,5 +205,12 @@
   .lesson-bottom__img {
     width: 300px;
     height: auto;
+  }
+  .overlay {
+    bottom: 36px;
+    left: 20px;
+    width: 300px;
+    font-size: 2rem;
+    padding: 10px;
   }
 }
